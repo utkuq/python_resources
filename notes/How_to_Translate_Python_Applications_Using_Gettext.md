@@ -50,24 +50,26 @@ So the final folder tree should be like this:
 ### Step #5
 Get strings from specified file in desired languages:
 
-For English:
+**For English:**
 ```bash
 xgettext --language=Python --keyword=_ --output=translations/en/LC_MESSAGES/messages.po <Your-File-Name>.py
 ```
 
-For Turkish:
+**For Turkish:**
 ```bash
 xgettext --language=Python --keyword=_ --output=translations/tr/LC_MESSAGES/messages.po <Your-File-Name>.py
 ```
+<br>
 
 If there are multiple ```.py``` files needs to be translated simultaneously, the command above can be modified as follows:
 
-For English:
+
+**For English:**
 ```bash
 xgettext --language=Python --keyword=_ --output=translations/en/LC_MESSAGES/messages.po <file_1>.py <file_2>.py
 ```
 
-For Turkish:
+**For Turkish:**
 ```bash
 xgettext --language=Python --keyword=_ --output=translations/tr/LC_MESSAGES/messages.po <file_1>.py <file_2>.py
 ```
@@ -75,12 +77,12 @@ xgettext --language=Python --keyword=_ --output=translations/tr/LC_MESSAGES/mess
 ### Step #6
 After translating the strings located at ```messages.po``` file from target language's folder, run the following commands:
 
-For English:
+**For English:**
 ```bash
 msgfmt -o translations/en/LC_MESSAGES/messages.mo translations/en/LC_MESSAGES/messages.po
 ```
 
-For Turkish:
+**For Turkish:**
 ```bash
 msgfmt -o translations/tr/LC_MESSAGES/messages.mo translations/tr/LC_MESSAGES/messages.po
 ```
